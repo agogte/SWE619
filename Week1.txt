@@ -1,0 +1,100 @@
+What does it mean to write correct software?
+- It conforms to some expectation (software contracts or specifications)
+- Should pass its testsuite  ..
+- Should not have exception or performance issues
+
+
+- Specifications/contracts (requirements)
+- Should not have exception or error
+
+- Performance, maintainable, expandable :  desired qualities , but not
+required for *correctness*
+
+
+f (x, y):   // return output = x  / y
+   //precond:  x,y are reals
+
+  if y == 0:  raise exception
+  ...
+
+
+
+
+preconditions
+- x,y are reals
+- y != 0
+- x >= 0
+- x >=  100
+- we want preconditions that are as WEAK as possible
+   1. x could be any real numbers
+   2. x must be non-negative
+   3. x must be >= 100
+
+3 is stronger than 2 is stronger 1
+the best precondition is the weakest one, i.e., TRUE  (the function
+has no assumption on the input)
+
+
+- output : number
+- output ~   x /y    (output * y   ~= x)
+
+- precondition/requirements:  a condition over the inputs ,
+assumptions that we make when the function starts
+   - x,y being real numbers
+   - y != 0
+
+- postcondition/behaviors:  behavior of the function (the program),
+relationshp btw inputs and outputs
+
+   1. output is a number (reals,... )     weaker
+   2. output * y ~= x                     stronger
+
+   the best postcondition is the strongest one,  i.e.,   output * y ~= x
+
+- side-effects:
+   - can change input X, ....
+
+
+task: sorting a list of numbers in ascending order  (e.g., 1,5,10,...)
+
+g(l):
+  //precondition: a list of numbers
+  //same data types (comparable)
+  //iterable ...
+  //finite
+
+  // l is arraylist of integers
+  // precondition over l:   none,  true
+
+   postcondition:
+   - |l| == |l'|
+   - l' same datatype  as l
+   - [1,2,1,2]   [1,1,1,2]
+   - l' is a permutation of l
+   - l' ascending order
+
+
+ //sort l in ascending order
+ return l'
+
+
+
+
+type checking
+
+- void f (int x, int y){
+   int o = 3;
+   return o;
+}
+
+type-checker is light-weight analysis
+
+assertion(y = x**2);
+
+
+
+
+
+- side-effects
+
+

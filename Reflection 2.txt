@@ -1,0 +1,5 @@
+1.
+- I would prefer writing a class that is mutable.
+- While building a complex software, it's better to have the ability to update the class object with respect to changes in the input or state of the operation beign performend.
+- We can expect better performance while updating exisiting objects rather than initializing a lot of objects and then using garbage collector.
+- Naive implementation of immutable classes can decrease the performance. To write efficient immutable classes, takes a lot of planning.
